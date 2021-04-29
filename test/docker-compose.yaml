@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    oss:
+        expose:
+            - '8080'
+        image: 'mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine'
+    nginx-proxy:
+        ports:
+            - '80:80'
+        volumes:
+            - '/var/run/docker.sock:/tmp/docker.sock:ro'
+        image: nginxproxy/nginx-proxy
