@@ -2,7 +2,7 @@ version: '3.3'
 services:
     oss:
         expose:
-            - '8080'
+            - '80'
         image: 'mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine'
     nginx-proxy:
         ports:
